@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul>
+        {% for item in l %}
+            <li>主播名：{{ item.get('name') }}，主播查询结果：{{ item.get('result') }}</li>
+        {% endfor %}
+    </ul>
+    <div>
+        <a href={{ url_for('upload') }}>重新上传</a>
+    </div>
+</body>
+</html>
