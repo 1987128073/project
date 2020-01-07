@@ -1,0 +1,4 @@
+git init
+git remote add origin https://gitee.com/zhangchao01/plspider.git
+git pull origin master
+git push -u origin master

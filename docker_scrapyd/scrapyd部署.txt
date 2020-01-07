@@ -1,0 +1,73 @@
+1.安装scrapyd及相关文件：
+	openpyxl==2.6.2
+	scrapy==1.7.2
+	pymongo==3.8.0
+	scrapy-redis==0.6.8
+	redis==3.3.2
+	selenium==3.141.0
+	requests==2.22.0
+	scrapyd==1.2.1
+	pymysql == 0.9.3
+	scrapy-splash == 0.7.2
+2.修改scrapyd中的配置文件:
+	cd scracpyd配置文件夹
+	vi default_scrapyd.conf # 修改ip 0.0.0.0
+	vi /etc/init.d/scrapyd 
+
+		#!/bin/bash
+		RT=6800
+		HOME="/var/scrapyd"
+		BIN="/root/miniconda3/envs/py36/bin/scrapyd"
+		 
+		pid=`netstat -lnopt | grep :$PORT | awk '/python/{gsub(/\/python/,"",$7);print $7;}'`
+		start() {
+		   if [ -n "$pid" ]; then
+		      echo "server already start,pid:$pid"
+		      return 0
+		   fi
+		 
+		   cd $HOME
+		   nohup $BIN >> $HOME/scrapyd.log 2>&1 &
+		   echo "start at port:$PORT"
+		}
+		 
+		stop() {
+		   if [ -z "$pid" ]; then
+		      echo "not find program on port:$PORT"
+		      return 0
+		   fi
+		 
+		   #结束程序，使用讯号2，如果不行可以尝试讯号9强制结束
+		   kill -9 $pid
+		   echo "kill program use signal 9,pid:$pid"
+		}
+		 
+		status() {
+		   if [ -z "$pid" ]; then
+		      echo "not find program on port:$PORT"
+		   else
+		      echo "program is running,pid:$pid"
+		   fi
+		}
+		 
+		case $1 in
+		   start)
+		      start
+		   ;;
+		   stop)
+		      stop
+		   ;;
+		   status)
+		      status
+		   ;;
+		   *)
+		      echo "Usage: {start|stop|status}"
+		   ;;
+		esac
+		 
+		exit 0
+
+
+	mkdir /var/scrapyd
+	chmod 755 /etc/init.d/scrapyd
+	service scrapyd start/stop
