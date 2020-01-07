@@ -149,4 +149,4 @@ def __login__(username, password, pathA, pathB):
 
 
 if __name__ == '__main__':
-    browser = __login__('13167617973', 'zc123456789', './pic/huakuai.png', './pic/login.png')
+    browser = __login__('', '', './pic/huakuai.png', './pic/login.png')

@@ -1,9 +1,0 @@
-mitmdump --upstream-auth HG3T29V0U33H432D:CF9328D54686ED24 -s C:\User\Public\Downloads\taobao_2\taobaolive_mitm.py
-python C:\User\Public\Downloads\taobao_2\pyppeteer_open_url.py
-
-
-mitmdump --upstream-auth HG3T29V0U33H432D:CF9328D54686ED24 -s taobaolive_mitm.py
-
-mitmdump -m upstream:http://http-proxy-t1.dobel.cn:9180 --upstream-auth ATLANDG4EGPK5S0:LKHN5uFx -s taobaolive_mitm.py
-
-mitmdump -m upstream:http://http-proxy-t1.dobel.cn:9180 --upstream-auth HG3T29V0U33H432D:CF9328D54686ED24 -s taobaolive_mitm.py

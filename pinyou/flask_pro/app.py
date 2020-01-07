@@ -11,7 +11,7 @@ from utils.zhiboshuju_get_anchor_info import AnchorInfo as AI_zhiboshuju
 from flask import Flask,render_template,request,redirect,url_for
 from werkzeug.utils import secure_filename
 
-r = redis.StrictRedis().from_url(url="redis://:pinliang@172.81.207.230:6379/0")
+r = redis.StrictRedis().from_url(url="")
 
 r_2 = redis.StrictRedis(host='192.168.1.180', port=30378)  # 任务redis
 

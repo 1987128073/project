@@ -94,6 +94,3 @@ MONGO_URI = '192.168.1.51'
 MONGO_DB = 'pltaobao'
 GOODSURLAPI = 'http://gw.api.taobao.com/router/rest'
 
-APPKEY = 27713634
-SECRET = '83d47df441bd1ee0ea41b96250c874c3'
-ADZONE = 109222900428

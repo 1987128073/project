@@ -1,17 +1,17 @@
 dev = {
     'flag': 1,
-    'redis_url': 'redis://:PL298CS2@172.81.225.73:6379/0',
+    'redis_url': '',
     'log_type': 'info',
-    'callback_url': 'http://test.pl298.com:8007/analysis/updateUser',
+    'callback_url': '',
     'mongodb_host': '192.168.1.180',
     'mongodb_port': 32766,
     'mongodb_url': 'mongodb://192.168.1.180:32766/',
     # mysql
-    "mysql_host": '212.64.84.172',
+    "mysql_host": '',
     "mysql_port": 3306,
-    "mysql_user": 'plceshi',
-    "mysql_pwd": 'Plceshi2018',
-    "db": 'pinliang_test',
+    "mysql_user": '',
+    "mysql_pwd": '',
+    "db": '',
     'mq_host': '192.168.1.53',
     'mq_port': 32072,
 }
