@@ -34,7 +34,7 @@ Js2Py==0.66
 kaitaistruct==0.8
 ldap3==2.5.2
 logparser==0.8.1
-lxml==4.4.0
+lxml==4.6.3
 MarkupSafe==1.1.1
 mitmproxy==4.0.4
 MouseInfo==0.0.4
