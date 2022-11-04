@@ -8,4 +8,4 @@ redis==2.10.6
 requests==2.22.0
 requests-html==0.10.0
 selenium==3.141.0
-Twisted==18.9.0
+Twisted==22.10.0
